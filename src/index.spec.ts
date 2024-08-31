@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, afterEach, MockInstance, vitest } from 'vitest'
 import { logLevels, LogLevel, createLogger, LogLevels } from './index.js'
 import * as R from 'ramda'
-import { mockConsole } from '../tests/mocks.js'
+import { mockConsole } from './tests/mocks.js'
 import chalk from 'chalk'
 vi.mock('chalk', () => {
   return {
