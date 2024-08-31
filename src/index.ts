@@ -11,7 +11,6 @@ export const logLevels: LogLevels = {
   [LogLevel.error]: { filter: 3, setColor: chalk.red, setBackgroundColor: chalk.bgRed, key: LogLevel.error },
 }
 
-export const getLevelFilter = (level: LogLevel): number => logLevels[level].filter
 export const checkLevel = (currentLevel: LogLevel, level: LogLevel): boolean =>
   logLevels[level].filter >= logLevels[currentLevel].filter
 export const createLogger = (context: string, currentLevel: LogLevel): Log =>
