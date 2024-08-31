@@ -34,6 +34,3 @@ export const createLogger = (context: string, currentLevel: LogLevel): Log =>
     R.mergeAll,
     R.assoc('context', context),
   )(logLevels) as Log
-
-export const log = createLogger('neuron', LogLevel.debug)
-export const taplog = (...args: any[]) => console.log(...args)
