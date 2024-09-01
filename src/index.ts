@@ -1,8 +1,32 @@
 import chalk from 'chalk'
 import * as R from 'ramda'
-import { LogLevel, type LogLevels, type Log } from './types.d.js'
-export { LogLevel, type LogLevels, type Log } from './types.d.js'
 import { format } from 'date-fns/format'
+
+export enum LogLevel {
+  debug = 'debug',
+  info = 'info',
+  warn = 'warn',
+  error = 'error',
+}
+
+export type Log = {
+  context: string
+  debug(...args: any[]): void
+  info(...args: any[]): void
+  warn(...args: any[]): void
+  error(...args: any[]): void
+}
+
+export type LogLevelFilter = {
+  filter: number
+  setColor: typeof chalk.white
+  setBackgroundColor: typeof chalk.bgWhite
+  key: LogLevel
+}
+
+export type LogLevels = {
+  [key in LogLevel]: LogLevelFilter
+}
 
 export const logLevels: LogLevels = {
   [LogLevel.debug]: { filter: 0, setColor: chalk.cyan, setBackgroundColor: chalk.bgCyan, key: LogLevel.debug },
