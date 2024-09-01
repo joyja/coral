@@ -25,7 +25,7 @@ export const createLogger = (context: string, currentLevel: LogLevel): Log =>
               setColor(format(new Date(), 'yyyy-MM-dd HH:mm:ss')),
               setColor(`| ${context}`),
               '\t',
-              ...R.map<T, U>(setColor, args),
+              ...R.map((arg: T) => setColor(arg as any), args),
             )
         },
       }

@@ -1,3 +1,5 @@
+import chalk from 'chalk'
+
 export enum LogLevel {
   debug = 'debug',
   info = 'info',

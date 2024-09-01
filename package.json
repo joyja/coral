@@ -5,7 +5,7 @@
   "description": "",
   "export": "src/index.js",
   "scripts": {
-    "build": "tsx src/index.ts",
+    "build": "tsc src/index.ts",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "postinstall": "npm run build"
