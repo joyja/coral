@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.4",
   "description": "",
-  "export": "src/index.js",
+  "exports": "./src/index.js",
   "scripts": {
     "build": "tsc src/index.ts",
     "test": "vitest",
