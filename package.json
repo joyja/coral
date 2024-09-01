@@ -3,14 +3,8 @@
   "type": "module",
   "version": "0.0.8",
   "description": "",
-  "exports": {
-    ".": [
-      "./dist/src/index.js",
-      {
-        "types": "./src/index.d.ts"
-      }
-    ]
-  },
+  "exports": "./dist/src/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "vitest",
