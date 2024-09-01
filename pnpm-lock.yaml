@@ -46,7 +46,7 @@ importers:
         specifier: ^4.15.7
         version: 4.19.0
       typescript:
-        specifier: ^5.4.5
+        specifier: ^5.5
         version: 5.5.4
       typescript-eslint:
         specifier: ^7.12.0
